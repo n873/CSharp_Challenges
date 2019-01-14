@@ -16,6 +16,7 @@ namespace WhereAmI
             };
 
             watcher.PositionChanged += (sender, eventArgs) => {
+                watcher.Stop();
                 Console.WriteLine($"GeoCoodinateWatcher:PositionChanged:{eventArgs.Position.Location}");
             };
 
